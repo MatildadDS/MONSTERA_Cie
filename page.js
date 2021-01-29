@@ -9,7 +9,7 @@ let space = bar.offsetTop;
 function helloBuddy() {
   if (window.scrollY >= space) {
     bar.classList.add("newnav");
-    logo.style.maxWidth = "10%";
+    logo.style.maxWidth = "25%";
     main.style.paddingTop = "10%";
   }
   else {
@@ -20,24 +20,24 @@ function helloBuddy() {
 }
 window.addEventListener("scroll", helloBuddy);
 
- //changer le image qui est dans le home page
- let myImage = document.getElementById("mainImage");
+//changer le image qui est dans le home page
+let myImage = document.getElementById("mainImage");
 
- let imageArray = ["imgs/entreprise.jpg","imgs/entreprise4.jpg",
- "imgs/entreprise3.jpg"];
-  
- let imageIndex = 0; 
- 
- function changeImage() {
-  myImage.setAttribute("src",imageArray[imageIndex]);
- imageIndex = (imageIndex + 1) % imageArray.length;
- }
- 
- setInterval(changeImage, 2500);
+let imageArray = ["imgs/entreprise.jpg", "imgs/entreprise4.jpg",
+  "imgs/entreprise3.jpg"];
+
+let imageIndex = 0;
+
+function changeImage() {
+  myImage.setAttribute("src", imageArray[imageIndex]);
+  imageIndex = (imageIndex + 1) % imageArray.length;
+}
+
+setInterval(changeImage, 2500);
 
 
- let foot = document.querySelector("footer");
- foot.innerHTML = `<div>
+let foot = document.querySelector("footer");
+foot.innerHTML = `<div>
  <nav>
  <a href="index.html" >Accueil</a></li>
  <a href="Product_page/produits.html">Produits</a></li>
@@ -55,19 +55,19 @@ window.addEventListener("scroll", helloBuddy);
  </div>
  <span>&copy; MONSTERA Team 2020</span> `
 
- let easter = document.querySelector('h2');
- function easteregg(){
-    document.documentElement.style.setProperty('--green', '#393939');
-    document.documentElement.style.setProperty('--brown', 'white');
-    document.documentElement.style.setProperty('--whitish', '#EDE8E2');
-    document.documentElement.style.setProperty('--white', '#000000');
-    document.documentElement.style.setProperty('--black', '#ffffff');
- }
+let easter = document.querySelector('h2');
+function easteregg() {
+  document.documentElement.style.setProperty('--green', '#393939');
+  document.documentElement.style.setProperty('--brown', 'white');
+  document.documentElement.style.setProperty('--whitish', '#EDE8E2');
+  document.documentElement.style.setProperty('--white', '#000000');
+  document.documentElement.style.setProperty('--black', '#ffffff');
+}
 
- easter.addEventListener("drag",easteregg);
+easter.addEventListener("drag", easteregg);
 
 //random quotes
- const quotesData = [
+const quotesData = [
   {
     "text": "Tenez les plantes éloignées de toute source de chaleur."
   },
@@ -96,11 +96,11 @@ function getRandomQuote() {
   ];
 
   currentQuote = randomQuote.text;
-  quoteplace.innerHTML = `&ldquo; ${currentQuote} &rdquo;` ;
+  quoteplace.innerHTML = `&ldquo; ${currentQuote} &rdquo;`;
 
 }
 
-setInterval(getRandomQuote,3000);
+setInterval(getRandomQuote, 3000);
 
- 
+
 
